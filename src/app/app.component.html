@@ -6,8 +6,10 @@
          [disableDefaultUI]="false"
          [zoomControl]="false" >
   <agm-marker  *ngFor="let m of markers; let i = index"
+               (markerClick)="clickedMarker(m.label, i)"
               [latitude]="m.lat"
               [longitude]="m.lng"
+              [label]="m.label"
               [markerDraggable]="m.draggable"></agm-marker>
 
   <agm-polygon  [paths]="paths"
@@ -15,8 +17,25 @@
                 [fillOpacity]= 0.1
                 [strokeColor]="'#09f'"
                 [strokeOpacity]= 0.8
-                [draggable]="true">
-  ></agm-polygon>
+                [draggable]="true"></agm-polygon>
+
+  <agm-polygon  [paths]="polylines"
+                [fillColor]="'#FF0000'"
+                [fillOpacity]= 0.1
+                [strokeColor]="'#FF0000'"
+                [strokeOpacity]= 0.8
+                [draggable]="true"></agm-polygon>
+
+
+  <!--<agm-polyline *ngFor="let p of polylines;"-->
+    <!--[strokeColor]="'#FF0000'"-->
+    <!--[strokeWeight]="3"-->
+    <!--[strokeOpacity]="0.5"-->
+    <!--[paths]="p.lng">-->
+  <!--</agm-polyline>-->
 
 </agm-map>
 
+<agm-map [latitude]="lat_2" [longitude]="lng_2" [zoom]="zoom_2">
+
+</agm-map>
