@@ -19,6 +19,7 @@
                 <!--[strokeOpacity]= 0.8-->
                 <!--[draggable]="true"></agm-polygon>-->
 
+  <!--여기는 가야산 관련-->
   <agm-polygon  [paths]="paths"
                 [fillColor]="'#801506'"
                 [fillOpacity]= 0.1
@@ -26,21 +27,55 @@
                 [strokeOpacity]= 0.8
                 [draggable]="true"></agm-polygon>
 
-  <agm-polygon  [paths]="polylines"
+  <agm-polygon  [paths]="polylines_g"
                 [fillColor]="'#801506'"
                 [fillOpacity]= 0.1
                 [strokeColor]="'#FF0000'"
                 [strokeOpacity]= 0.8
                 [draggable]="true"></agm-polygon>
 
-  <agm-polygon  [paths]="polylines_2"
+  <agm-polygon  [paths]="polylines_g_2"
                 [fillColor]="'#FF0000'"
                 [fillOpacity]= 0.1
                 [strokeColor]="'#FF0000'"
                 [strokeOpacity]= 0.8
                 [draggable]="true"></agm-polygon>
 
+  <!--여기는 덕유산 관련-->
+  <agm-polygon  [paths]="pahts_d"
+                [fillColor]="'#801506'"
+                [fillOpacity]= 0.1
+                [strokeColor]="'#ff1917'"
+                [strokeOpacity]= 0.8
+                [draggable]="true"></agm-polygon>
 
+  <!--여기는 지리산 관련-->
+  <agm-polygon  [paths]="paths_gi"
+                [fillColor]="'#801506'"
+                [fillOpacity]= 0.1
+                [strokeColor]="'#ff1917'"
+                [strokeOpacity]= 0.8
+                [draggable]="true"></agm-polygon>
+
+  <agm-polygon  [paths]="polylines_gi"
+                [fillColor]="'#801506'"
+                [fillOpacity]= 0.1
+                [strokeColor]="'#FF0000'"
+                [strokeOpacity]= 0.8
+                [draggable]="true"></agm-polygon>
+
+  <agm-polygon  [paths]="polylines_gi_2"
+                [fillColor]="'#801506'"
+                [fillOpacity]= 0.1
+                [strokeColor]="'#FF0000'"
+                [strokeOpacity]= 0.8
+                [draggable]="true"></agm-polygon>
+  <agm-polygon  [paths]="polylines_gi_3"
+                [fillColor]="'#801506'"
+                [fillOpacity]= 0.1
+                [strokeColor]="'#FF0000'"
+                [strokeOpacity]= 0.8
+                [draggable]="true"></agm-polygon>
   <!--<agm-polyline *ngFor="let p of polylines;"-->
     <!--[strokeColor]="'#FF0000'"-->
     <!--[strokeWeight]="3"-->
