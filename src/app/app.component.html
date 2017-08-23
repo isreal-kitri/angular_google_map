@@ -5,86 +5,30 @@
 <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom"
          [disableDefaultUI]="false"
          [zoomControl]="false" >
-  <!--<agm-marker  *ngFor="let m of markers; let i = index"-->
-               <!--(markerClick)="clickedMarker(m.label, i)"-->
-              <!--[latitude]="m.lat"-->
-              <!--[longitude]="m.lng"-->
-              <!--[label]="m.label"-->
-              <!--[markerDraggable]="m.draggable"></agm-marker>-->
+  <agm-marker  *ngFor="let m of markers; let i = index"
+              (markerClick)="clickedMarker(m.label, i)"
+               [latitude]="m.lat"
+               [longitude]="m.lng"
+               [label]="m.label"
+               [markerDraggable]="m.draggable"></agm-marker>
 
-  <!--<agm-polygon  [paths]="paths"-->
-                <!--[fillColor]="'#004c80'"-->
-                <!--[fillOpacity]= 0.1-->
-                <!--[strokeColor]="'#09f'"-->
-                <!--[strokeOpacity]= 0.8-->
-                <!--[draggable]="true"></agm-polygon>-->
-
-  <!--여기는 가야산 관련-->
   <agm-polygon  [paths]="paths"
-                [fillColor]="'#801506'"
-                [fillOpacity]= 0.1
-                [strokeColor]="'#ff1917'"
-                [strokeOpacity]= 0.8
-                [draggable]="true"></agm-polygon>
+                [fillColor]="'#004c80'"
+                [fillOpacity]= 0.01
+                [strokeColor]="'#09f'"
+                [strokeColor]="'#ff1e34'"
+                [strokeOpacity]= 0.9
+                [draggable]="true">
+    </agm-polygon>
 
-  <agm-polygon  [paths]="polylines_g"
-                [fillColor]="'#801506'"
-                [fillOpacity]= 0.1
-                [strokeColor]="'#FF0000'"
-                [strokeOpacity]= 0.8
-                [draggable]="true"></agm-polygon>
+  <agm-circle *ngFor="let c of circless; let i = index"
+              [latitude]="c.lat" [longitude]="c.lng"
+              [radius]="20000"
+              [fillColor]="c.fillColor"
+              [editable]="Circleeditable">
+  </agm-circle>
 
-  <agm-polygon  [paths]="polylines_g_2"
-                [fillColor]="'#FF0000'"
-                [fillOpacity]= 0.1
-                [strokeColor]="'#FF0000'"
-                [strokeOpacity]= 0.8
-                [draggable]="true"></agm-polygon>
+</agm-map>
 
-  <!--여기는 덕유산 관련-->
-  <agm-polygon  [paths]="pahts_d"
-                [fillColor]="'#801506'"
-                [fillOpacity]= 0.1
-                [strokeColor]="'#ff1917'"
-                [strokeOpacity]= 0.8
-                [draggable]="true"></agm-polygon>
 
-  <!--여기는 지리산 관련-->
-  <agm-polygon  [paths]="paths_gi"
-                [fillColor]="'#801506'"
-                [fillOpacity]= 0.1
-                [strokeColor]="'#ff1917'"
-                [strokeOpacity]= 0.8
-                [draggable]="true"></agm-polygon>
 
-  <agm-polygon  [paths]="polylines_gi"
-                [fillColor]="'#801506'"
-                [fillOpacity]= 0.1
-                [strokeColor]="'#FF0000'"
-                [strokeOpacity]= 0.8
-                [draggable]="true"></agm-polygon>
-
-  <agm-polygon  [paths]="polylines_gi_2"
-                [fillColor]="'#801506'"
-                [fillOpacity]= 0.1
-                [strokeColor]="'#FF0000'"
-                [strokeOpacity]= 0.8
-                [draggable]="true"></agm-polygon>
-  <agm-polygon  [paths]="polylines_gi_3"
-                [fillColor]="'#801506'"
-                [fillOpacity]= 0.1
-                [strokeColor]="'#FF0000'"
-                [strokeOpacity]= 0.8
-                [draggable]="true"></agm-polygon>
-  <!--<agm-polyline *ngFor="let p of polylines;"-->
-    <!--[strokeColor]="'#FF0000'"-->
-    <!--[strokeWeight]="3"-->
-    <!--[strokeOpacity]="0.5"-->
-    <!--[paths]="p.lng">-->
-  <!--</agm-polyline>-->
-
-<!--</agm-map>-->
-
-<!--<agm-map [latitude]="lat_2" [longitude]="lng_2" [zoom]="zoom_2">-->
-
-<!--</agm-map>-->

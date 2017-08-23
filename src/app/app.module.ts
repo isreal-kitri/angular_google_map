@@ -12,7 +12,7 @@ import {Ng2MapModule} from "ng2-map";
     BrowserModule,
     CommonModule,
     FormsModule,
-    Ng2MapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyDQW0wEvwnxAp0wfcsXRyRcOmV70lVgUzA'}),
+     // Ng2MapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyDQW0wEvwnxAp0wfcsXRyRcOmV70lVgUzA'}),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDQW0wEvwnxAp0wfcsXRyRcOmV70lVgUzA'
     })
